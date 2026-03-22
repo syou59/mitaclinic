@@ -375,30 +375,21 @@ img {
 
 .about-image-wrap {
   position: relative;
-  margin: 20px 0 0 20px;
 }
 
 .about-image-wrap::before {
-  content: '';
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  width: 100%;
-  height: 100%;
-  border: 2px solid var(--color-accent);
-  opacity: 0.35;
-  z-index: 0;
-  pointer-events: none;
+  display: none;
 }
 
 .about-image {
-  position: relative;
-  z-index: 1;
   width: 100%;
   aspect-ratio: 2/3;
   object-fit: cover;
   object-position: center top;
   display: block;
+  border: 2px solid var(--color-accent);
+  opacity: 1;
+  box-shadow: 8px 8px 0px var(--color-border);
 }
 
 .about-text h3 {
@@ -789,15 +780,8 @@ img {
     letter-spacing: 2px;
   }
 
-  .about-image-wrap {
-    margin: 14px 0 0 14px;
-  }
-
-  .about-image-wrap::before {
-    top: -14px;
-    left: -14px;
-    width: 100%;
-    height: 100%;
+  .about-image {
+    box-shadow: 5px 5px 0px var(--color-border);
   }
 }
 </style>
