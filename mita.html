@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>三田クリニック | さいたま市浦和区の心療内科・精神科</title>
+<meta name="description" content="三田クリニック - さいたま市浦和区岸町の心療内科・精神科。患者に寄り添い安心できる医療を提供します。浦和駅徒歩10分。">
+<style>
+/* ===== Reset & Base ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-bg: #ffffff;
+  --color-bg-light: #f5f8f6;
+  --color-bg-card: #eef3f0;
+  --color-text: #2c3830;
+  --color-text-muted: #6b7c74;
+  --color-accent: #5c8f7a;
+  --color-accent-light: #7aad96;
+  --color-white: #ffffff;
+  --color-border: #d8e5df;
+  --font-family: "Helvetica Neue", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", "Meiryo", sans-serif;
+  --transition: all 0.3s ease;
+  --max-width: 1100px;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--color-accent-light);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== Header ===== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+  transition: var(--transition);
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  width: 38px;
+  height: 38px;
+  border: 2px solid var(--color-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--color-accent);
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: 2px;
+}
+
+.logo-sub {
+  font-size: 10px;
+  color: var(--color-text-muted);
+  letter-spacing: 1px;
+  display: block;
+  margin-top: -2px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav a {
+  color: var(--color-text);
+  font-size: 13px;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-accent);
+  transition: var(--transition);
+}
+
+.nav a:hover {
+  color: var(--color-accent);
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 8px;
+  background: none;
+  border: none;
+  z-index: 1100;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-text);
+  transition: var(--transition);
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ===== Hero ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #eef5f1 0%, #f5f8f6 50%, #e8f2ec 100%);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 50%, rgba(92, 143, 122, 0.08) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 30%, rgba(92, 143, 122, 0.05) 0%, transparent 50%);
+}
+
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(to top, #f5f8f6, transparent);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 120px 24px 80px;
+  max-width: 800px;
+}
+
+.hero-label {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  padding: 6px 20px;
+  margin-bottom: 32px;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  letter-spacing: 4px;
+  color: var(--color-text);
+}
+
+.hero-title em {
+  font-style: normal;
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+.hero-subtitle {
+  font-size: clamp(14px, 2vw, 16px);
+  color: var(--color-text-muted);
+  letter-spacing: 2px;
+  line-height: 2;
+  margin-bottom: 48px;
+}
+
+.hero-line {
+  width: 60px;
+  height: 1px;
+  background: var(--color-accent);
+  margin: 0 auto 48px;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: transparent;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  padding: 14px 40px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font-family);
+}
+
+.hero-cta:hover {
+  background: var(--color-accent);
+  color: #ffffff;
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  animation: fadeInUp 1s ease 1s both;
+}
+
+.scroll-indicator span {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--color-text-muted);
+  writing-mode: vertical-rl;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 40px;
+  background: var(--color-accent);
+  animation: scrollLine 2s ease infinite;
+}
+
+@keyframes scrollLine {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  51% { transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translate(-50%, 20px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* ===== Section Common ===== */
+.section {
+  padding: 100px 24px;
+  position: relative;
+}
+
+.section-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section-label {
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 300;
+  letter-spacing: 4px;
+  margin-bottom: 16px;
+  color: var(--color-text);
+}
+
+.section-line {
+  width: 40px;
+  height: 1px;
+  background: var(--color-accent);
+  margin-bottom: 40px;
+}
+
+/* ===== About / Greeting ===== */
+.about {
+  background: var(--color-bg);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-image-wrap {
+  position: relative;
+}
+
+.about-image-wrap::before {
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  right: 16px;
+  bottom: 16px;
+  border: 1px solid var(--color-accent);
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.about-image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  filter: brightness(0.95);
+}
+
+.about-text h3 {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  color: var(--color-text);
+}
+
+.about-text .doctor-title {
+  font-size: 13px;
+  color: var(--color-accent);
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+}
+
+.about-text .greeting-msg {
+  font-size: 15px;
+  line-height: 2.2;
+  color: var(--color-text-muted);
+  margin-bottom: 32px;
+}
+
+.about-text .greeting-msg p {
+  margin-bottom: 16px;
+}
+
+/* ===== Profile / Career ===== */
+.profile {
+  background: var(--color-bg-light);
+}
+
+.career-list {
+  list-style: none;
+  position: relative;
+  padding-left: 24px;
+}
+
+.career-list::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: var(--color-border);
+}
+
+.career-item {
+  position: relative;
+  padding: 16px 0 16px 28px;
+}
+
+.career-item::before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 26px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--color-white);
+  border: 2px solid var(--color-accent);
+}
+
+.career-year {
+  font-size: 13px;
+  color: var(--color-accent);
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.career-desc {
+  font-size: 15px;
+  color: var(--color-text-muted);
+  letter-spacing: 1px;
+}
+
+/* ===== Hours ===== */
+.hours {
+  background: var(--color-bg);
+}
+
+.hours-table-wrap {
+  overflow-x: auto;
+  margin-top: 16px;
+}
+
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 500px;
+}
+
+.hours-table th,
+.hours-table td {
+  padding: 16px 12px;
+  text-align: center;
+  font-size: 14px;
+  border-bottom: 1px solid var(--color-border);
+  letter-spacing: 1px;
+}
+
+.hours-table th {
+  color: var(--color-accent);
+  font-weight: 400;
+  font-size: 13px;
+  background: var(--color-bg-light);
+}
+
+.hours-table td {
+  color: var(--color-text-muted);
+}
+
+.hours-table .mark {
+  color: var(--color-accent);
+  font-size: 18px;
+}
+
+.hours-table .closed {
+  color: #b0bdb8;
+}
+
+.hours-note {
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+/* ===== Access ===== */
+.access {
+  background: var(--color-bg-light);
+}
+
+.access-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.access-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.access-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.access-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  font-size: 16px;
+}
+
+.access-detail h4 {
+  font-size: 13px;
+  color: var(--color-accent);
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+.access-detail p {
+  font-size: 15px;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+.access-detail a {
+  color: var(--color-text-muted);
+}
+
+.access-detail a:hover {
+  color: var(--color-accent);
+}
+
+.map-wrap {
+  position: relative;
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.map-wrap iframe {
+  width: 100%;
+  height: 360px;
+  border: 0;
+  filter: grayscale(0.3) brightness(1.0) contrast(1.0);
+  transition: var(--transition);
+}
+
+.map-wrap:hover iframe {
+  filter: grayscale(0) brightness(1.0) contrast(1.0);
+}
+
+/* ===== Footer ===== */
+.footer {
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+  padding: 60px 24px 30px;
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 48px;
+}
+
+.footer-logo .logo-text {
+  font-size: 16px;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.footer-nav a {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  letter-spacing: 1px;
+}
+
+.footer-nav a:hover {
+  color: var(--color-accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+}
+
+.footer-copy {
+  font-size: 11px;
+  color: #9aada6;
+  letter-spacing: 1px;
+}
+
+/* ===== Animations ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ===== Mobile Nav Overlay ===== */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.97);
+  z-index: 1050;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-nav.open {
+  display: flex;
+  opacity: 1;
+}
+
+.mobile-nav a {
+  font-size: 16px;
+  color: var(--color-text);
+  letter-spacing: 3px;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 16px;
+  width: 200px;
+  text-align: center;
+}
+
+.mobile-nav a:hover {
+  color: var(--color-accent);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .header-inner {
+    height: 60px;
+  }
+
+  .hero-content {
+    padding: 100px 20px 60px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-image-wrap {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .access-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .section {
+    padding: 72px 20px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .footer-nav {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    padding: 5px 14px;
+  }
+
+  .hero-title {
+    letter-spacing: 2px;
+  }
+
+  .section-title {
+    letter-spacing: 2px;
+  }
+
+  .about-image-wrap::before {
+    top: -10px;
+    left: -10px;
+    right: 10px;
+    bottom: 10px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">三</div>
+      <div>
+        <div class="logo-text">三田クリニック</div>
+        <div class="logo-sub">MITA CLINIC</div>
+      </div>
+    </a>
+    <nav class="nav">
+      <a href="#about">ごあいさつ</a>
+      <a href="#profile">医師紹介</a>
+      <a href="#hours">診療時間</a>
+      <a href="#access">アクセス</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#about" onclick="closeMenu()">ごあいさつ</a>
+  <a href="#profile" onclick="closeMenu()">医師紹介</a>
+  <a href="#hours" onclick="closeMenu()">診療時間</a>
+  <a href="#access" onclick="closeMenu()">アクセス</a>
+</div>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-label">Mita Clinic</div>
+    <h1 class="hero-title">
+      患者に<em>寄り添い</em><br>
+      安心できる医療を<br>
+      提供します
+    </h1>
+    <div class="hero-line"></div>
+    <p class="hero-subtitle">
+      さいたま市浦和区の心療内科・精神科<br>
+      三田クリニック
+    </p>
+    <a href="tel:0488224814" class="hero-cta">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      048-822-4814
+    </a>
+  </div>
+</section>
+
+<!-- About / Greeting -->
+<section class="section about" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-image-wrap fade-in-left">
+        <img src="doctor.png" alt="三田周平 医師" class="about-image"
+             onerror="this.style.background='linear-gradient(135deg,#1a1a1a,#2a2a2a)';this.style.display='flex';this.alt=''">
+      </div>
+      <div class="about-text fade-in-right">
+        <p class="section-label">Greeting</p>
+        <h2 class="section-title">ごあいさつ</h2>
+        <div class="section-line"></div>
+        <p class="doctor-title">院長　三田 周平</p>
+        <div class="greeting-msg">
+          <p>
+            この度、さいたま市浦和区に三田クリニックを開院いたしました。
+          </p>
+          <p>
+            私はこれまで総合病院での初期研修、精神科専門病院での専門研修を通じて、
+            さまざまな患者さまと向き合ってまいりました。
+          </p>
+          <p>
+            つらい気持ちやお悩みを抱えている方に寄り添い、
+            安心して通っていただけるクリニックを目指してまいります。
+            どうぞお気軽にご相談ください。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Profile / Career -->
+<section class="section profile" id="profile">
+  <div class="section-inner">
+    <div class="fade-in">
+      <p class="section-label">Doctor</p>
+      <h2 class="section-title">医師紹介</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="fade-in">
+      <h3 style="font-size:20px; font-weight:400; letter-spacing:2px; margin-bottom:8px;">三田 周平<span style="font-size:12px; color:var(--color-text-muted); margin-left:12px; letter-spacing:1px;">Shuhei Mita</span></h3>
+      <p style="font-size:13px; color:var(--color-accent); letter-spacing:2px; margin-bottom:32px;">院長</p>
+      <h4 style="font-size:14px; font-weight:400; color:var(--color-text); letter-spacing:2px; margin-bottom:20px; border-bottom:1px solid var(--color-border); padding-bottom:12px;">経 歴</h4>
+      <ul class="career-list">
+        <li class="career-item">
+          <div class="career-year">2020 - 2022</div>
+          <div class="career-desc">春日部中央病院　初期研修医</div>
+        </li>
+        <li class="career-item">
+          <div class="career-year">2022 - 2025</div>
+          <div class="career-desc">埼玉県精神医療センター　精神科専攻医</div>
+        </li>
+        <li class="career-item">
+          <div class="career-year">2025 -</div>
+          <div class="career-desc">三田クリニック　開院</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Hours -->
+<section class="section hours" id="hours">
+  <div class="section-inner">
+    <div class="fade-in">
+      <p class="section-label">Hours</p>
+      <h2 class="section-title">診療時間</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="hours-table-wrap fade-in">
+      <table class="hours-table">
+        <thead>
+          <tr>
+            <th>診療時間</th>
+            <th>月</th>
+            <th>火</th>
+            <th>水</th>
+            <th>木</th>
+            <th>金</th>
+            <th>土</th>
+            <th>日・祝</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>9:00 - 12:00</td>
+            <td class="mark">●</td>
+            <td class="mark">●</td>
+            <td class="mark">●</td>
+            <td class="closed">―</td>
+            <td class="mark">●</td>
+            <td class="mark">●</td>
+            <td class="closed">―</td>
+          </tr>
+          <tr>
+            <td>14:00 - 18:00</td>
+            <td class="mark">●</td>
+            <td class="mark">●</td>
+            <td class="mark">●</td>
+            <td class="closed">―</td>
+            <td class="mark">●</td>
+            <td class="closed">―</td>
+            <td class="closed">―</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="hours-note">
+        ※ 休診日：木曜・日曜・祝日、土曜午後<br>
+        ※ 受付は診療終了の30分前までとなります<br>
+        ※ 診療時間は変更になる場合がございます。お電話にてご確認ください。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Access -->
+<section class="section access" id="access">
+  <div class="section-inner">
+    <div class="fade-in">
+      <p class="section-label">Access</p>
+      <h2 class="section-title">アクセス</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="access-grid">
+      <div class="access-info fade-in-left">
+        <div class="access-item">
+          <div class="access-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <div class="access-detail">
+            <h4>医院名</h4>
+            <p>三田クリニック</p>
+          </div>
+        </div>
+        <div class="access-item">
+          <div class="access-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div class="access-detail">
+            <h4>所在地</h4>
+            <p>〒330-0064<br>さいたま市浦和区岸町7-9-14</p>
+          </div>
+        </div>
+        <div class="access-item">
+          <div class="access-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="6" width="20" height="12" rx="2"/>
+              <path d="M2 10h20"/>
+              <circle cx="7" cy="15" r="1"/><circle cx="17" cy="15" r="1"/>
+            </svg>
+          </div>
+          <div class="access-detail">
+            <h4>交通</h4>
+            <p>JR 浦和駅より徒歩10分</p>
+          </div>
+        </div>
+        <div class="access-item">
+          <div class="access-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </div>
+          <div class="access-detail">
+            <h4>電話番号</h4>
+            <p><a href="tel:0488224814">048-822-4814</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="map-wrap fade-in-right">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3233.5!2d139.656!3d35.855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z44GV44GE44Gf44G-5biC5rWm5ZKM5Yy65bK454S3Ny05LTE0!5e0!3m2!1sja!2sjp!4v1"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="三田クリニック 地図">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <a href="#" class="logo">
+          <div class="logo-icon" style="width:32px;height:32px;font-size:14px;">三</div>
+          <div>
+            <div class="logo-text">三田クリニック</div>
+            <div class="logo-sub">MITA CLINIC</div>
+          </div>
+        </a>
+      </div>
+      <nav class="footer-nav">
+        <a href="#about">ごあいさつ</a>
+        <a href="#profile">医師紹介</a>
+        <a href="#hours">診療時間</a>
+        <a href="#access">アクセス</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2025 三田クリニック All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobileNav');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  mobileNav.classList.toggle('open');
+  document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+});
+
+function closeMenu() {
+  hamburger.classList.remove('active');
+  mobileNav.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// Header scroll effect
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    header.style.background = 'rgba(255, 255, 255, 0.98)';
+    header.style.boxShadow = '0 1px 16px rgba(92,143,122,0.08)';
+  } else {
+    header.style.background = 'rgba(255, 255, 255, 0.92)';
+    header.style.boxShadow = 'none';
+  }
+});
+
+// Scroll animation (Intersection Observer)
+const observerOptions = {
+  threshold: 0.15,
+  rootMargin: '0px 0px -40px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right').forEach(el => {
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>
